@@ -1415,6 +1415,8 @@ namespace LCD1IN8 {
     //% block="LCD1IN8 Init"
     //% weight=200
     export function LCD_Init(): void {
+        pins.digitalWritePin(LCD_CS, 0);
+        control.waitMicros(1000);
         pins.digitalWritePin(LCD_RST, 1);
         control.waitMicros(1000);
         pins.digitalWritePin(LCD_RST, 0);
