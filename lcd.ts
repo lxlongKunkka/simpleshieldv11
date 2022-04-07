@@ -1870,8 +1870,8 @@ namespace LCD1IN8 {
             for (Column = 0; Column < 7; Column++) {
                 if (Font12_Table[off] & (0x80 >> (Column % 8)))
                     LCD_SetPoint(Xchar + Column, Ychar + Page, Color);
-                else
-                    LCD_SetPoint(Xchar + Column, Ychar + Page, COLOR.BLUE)
+                //else
+                //    LCD_SetPoint(Xchar + Column, Ychar + Page, COLOR.BLUE)
                 //One pixel is 8 bits
                 if (Column % 8 == 7)
                     off++;
